@@ -1,0 +1,48 @@
+Doresc corectarea manuală a testelor pentru tema 1.
+
+Task 1: Markov is coming
+
+-decode_path: stim ca numarul unei stari este dat de relatia (i-1)*n+j,unde i este indicele liniei si j indicele coloanei.De asemenea se observa usor ca,daca stim numarul de coloane ale matricei si numarul starii,atunci indicele coloanei este mod(stare,nr_coloane),astfel aflandu-se usor si indicele liniei.Tot ce avem de facut in continuare este sa afisam m*n astfel de perechi,unde m si n sunt dimensiunile matricei.
+
+-get_adjacency_matrix:in functie de codificarea bitilor si situarea unui element in matrice(daca are vecini sau iese in stare de win/lose) am abordat urmatoarea parcurgere:mai intai prima linie,ultima linie,prima coloana si ultima coloana,fara cele 4 colturi ale matricei.Apoi abordam cazurile corespunzatoare celor 4 colturi si la final parcurgem submatricea determinata de liniile de la 2 la m-1 si coloanele de la 2 la n-1,deoarece toate aceste elemente au vecini valizi.
+
+-get_Jacobi_parameters:extragem parametrii pentru metoda Jacobi
+
+-get_link_matrix:matricea rezultata este exact matricea de adiacenta,cu mentiunea ca fiecare valoare de 1 se imparte la numarul de elemente catre care se duc tranzitii din elementul curent
+
+-parse_labyrinth: memoram in Labyrinth matricea memorata in fisierul text de la calea furnizata ca parametru
+
+-heuristic_greedy: algoritmul este in mare parte implementat cu pseudocodul oferit de enuntul problemei
+
+-perform_iterative:aplicam algoritmul Jacobi
+
+
+
+
+Task 2: Linear regression
+
+-parse_csv_file si parse_data_set_file : functii de parsare a datelor primite
+
+-gradient_descent : calculam gradientul folosind formulele data in enuntul problemei
+
+-linear_regression_cost_function : calculam costul regresiei folosind formulele date in enuntul problemei
+
+-lasso_regression_cost si ridge_regression_cost: foarte asemanatoare cu linear_regression_cost,dar sufera mici modificari la formulele utilizate
+
+-prepare_for_regression: transforma stringurile matricei  InitialMatrix in valorile numerice corespunzatoare cerute
+
+-normal_equation: calculam coeficientii theta folosind formulele mentionate in enuntul problemei
+
+
+Task 3: Mnist-101
+
+-load_dataset:incarca fisierul primit ca parametru
+
+-split_dataset : divizeaza matricea X si vectorul coloana Y in doua submatrice X1 si X2 si doi vectori coloana Y1 si Y2,dimensiunile acestora fiind date de procentul primit ca parametru: X1 si Y1 vor avea dimensiunile procent*dimensiuni_initiale,iar X2 si Y2 1-procent*dimensiuni_initiale
+
+-initialize_weights : genereaza o matrice cu elemente arbitrare din intervalul (-epsilon,epsilon),acest numar avand formula mentionata in enuntul problemei
+
+
+
+
+
